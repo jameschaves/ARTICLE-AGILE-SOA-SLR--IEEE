@@ -1,0 +1,156 @@
+In this this \acrfull{SLR} it was used the guidelines proposed by \citet{Kitchenham2004} and \citet{Kitchenham2007} and thus, the next steps where followed:
+
+\begin{enumerate}
+\item Planning the review:
+	\begin{enumerate}[a)] % a), b), c), ...
+	\item Identification of the need for a review
+    \item Developing a review protocol
+	\end{enumerate}
+\item Conducting the review:
+	\begin{enumerate}[a)] % a), b), c), ...
+	\item Identification of research
+    \item Selection of primary studies
+    \item Study quality assessment
+    \item Data extraction \& monitoring
+    \item Data synthesis
+	\end{enumerate}
+\item Reporting the review
+\end{enumerate}
+
+A review protocol is a written plan that is completed before the review begins and it describes every aspect of the review from the background, the rationale for the survey, to the final report. A predefined protocol reduce the possibility researcher bias and provides a means by which the review itself can be repeated or updated at a later date to include subsequent publications  \cite{Lane2011,Kitchenham2004}. According to \citet{Kitchenham2004} the background is the rationale for the survey, explain the need for the review. In this paper the background is showed in the section \ref{sec:Background}. In the following subsections, it is presented the elements of the review according to the developed review protocol and some additional planning information.
+
+
+\subsection{Research questions}
+\label{subsec:ResearchQuestion}
+As proposed by \cite{Kitchenham2007} the primary and secondaries research questions would elaborated for this study:
+\begin{enumerate}
+\item Primary Research Question (RQ01): What Agile processes are proposed for developing SOA Applications?
+	\begin{itemize}
+	\item Population: all roles in software development process;
+    \item Intervention: agile Processes for development SOA applications.
+    \item Control: Processes for traditional software development;
+    \item Outcomes: set of Agile frameworks, models and techniques for developing SOA applications.
+	\end{itemize}
+\item Research Question (RQ02): What stages of the agile life cycle are the studies covering?
+\item Research Question (RQ03): What common principles of \acrfull{SOA} are the studies covering?
+\end{enumerate}
+
+The RQ02 and RQ03 research questions complement the RQ01 research question. The research question RQ01 tries to answer what kind of contribution the studies bring, process, method, tool, etc., and the type of research approach, validation research, evaluation research, solution proposal, philosophical papers, opinion papers, or experience Papers \cite{wieringa2006requirements}. In addition, the RQ02 research question seeks to identify at which stage of the life cycle is the focus of the studies (see subsection \ref{subsec:AgileDevelopment}) and the RQ03 research question is concerned with identifying how common principles of \acrshort{SOA} are addressed in the studies (see subsection \ref{subsec:SOA}).
+
+\todo{see \citet{Petersen2008} about a figure to RQ01}
+
+
+\subsection{Search string and data sources}
+\label{subsec:SearchStringDataSources}
+
+To compose the search string the main words and synonyms were identified. Table \ref{tab:SearchSynonyms} describes these synonyms. At first, we tried to use other synonyms, such as \acrfull{XP}, SCRUM, Lean, and Crystal, but these synonyms did not add much, and sometimes brought undesirable works. In addition to the selected synonyms, the words "architecture", "computing", "system", and "application" were added to limit the result only to the type of study desired.
+
+\begin{table}[ht]
+\begin{tabular}{lll}
+\hline
+Agile Development & & Service-oriented Architecture \\ \hline
+Agile Method & & SOA \\
+Agile Programming & & SBA\footnote{\acrfull{SBA}} \\
+Agile Process & & SOC\footnote{\acrfull{SOC}} \\
+Agile Practice & & Webservice \\
+Agile Requirement & & REST\footnote{\acrfull{REST}} \\
+Agile Technique & & SOAP\footnote{\acrfull{SOAP}} \\
+ & & Service-based \\ \hline
+\end{tabular}
+\caption{Search synonyms}
+\label{tab:SearchSynonyms}
+\end{table}
+
+All of the used electronic data sources work with a well know structure to ask about electronic papers, using the operator `OR' to include synonyms for each search term, and the operator `AND' to link together each set of synonyms. Thus, the search string used was:
+((
+\textit{SOA} OR \textit{SBA} OR \textit{SOC} OR \textit{webservice*} OR \textit{``web service''} OR \textit{``web services''} OR \textit{REST} OR \textit{SOAP} 
+OR 
+((\textit{``software-oriented''} OR \textit{``Software oriented''}) AND (\textit{architecture} OR \textit{computing})) 
+OR 
+((\textit{``service-based''} OR \textit{``service based''}) AND (\textit{application*} OR \textit{system})
+)) 
+AND 
+(\textit{``AGILE DEVELOPMENT''} OR \textit{``AGILE MANUFACTURING''} OR \textit{``AGILE METHOD''} OR \textit{``AGILE PROGRAMMING''} OR \textit{``AGILE PROCESS''} OR \textit{``AGILE PRACTICE''} OR \textit{``AGILE REQUIREMENT''} OR \textit{``AGILE TECHNIQUE''}))
+
+As it is possible to see within the selection's criteria, table \ref{tab:StudySelectionCriteria}, it was chosen to work only with electronic data sources, so table \ref{tab:DataSources} lists those that were used. Each data source has its own peculiarity to do the search, so the search string above needed to be adapted for each case, but without losing its essence.
+
+\begin{table}[ht]
+\begin{tabular}{lll}
+\hline
+Source &  & URL \\ \hline
+IEEE &  & \url{http://ieeexplore.ieee.org} \\
+ACM &  & \url{http://portal.acm.org} \\
+Web of Science &  & \url{http://www.isiknowledge.com} \\
+Springer &  & \url{http://www.springerlink.com} \\
+Science Direct &  & \url{http://www.sciencedirect.com} \\
+Scopus &  & \url{https://www.scopus.com} \\ \hline
+\end{tabular}
+\caption{Data sources}
+\label{tab:DataSources}
+\end{table}
+
+\subsection{Study selection, data extraction and quality assessment}
+\label{subsec:StudySelAndExt}
+
+All electronic data sources used in this work provide advanced tools that allow the definition of other parameters at the time of the search. Even though the original data source tool does not provide all the necessary features, some parameters are easy to identify in standalone tools, such as an electronic data sheet. Some selection criteria used in this work fit this type of parameters, which can be seen in the section "Criteria for inclusion of studies / Automatically identified" in the table \ref{tab:StudySelectionCriteria}.
+
+The other criteria for inclusion and exclusion of studies were identified through a careful reading of the authors title, abstract and keywords. Some studies were excluded late, during the data extraction phase, when the studies were read integrally. This was because a conservative criterion was used in this selection phase: \textit{`in case of doubt the study remains'}.
+
+During the extraction phase the selected studies were assessed in order to identify the degree to adjustment of the purposes of the \acrshort{SLR}.
+
+
+\begin{table}[ht]
+%\resizebox{\textwidth}{!}{%
+%\begin{adjustbox}{max width=\textwidth}
+%\begin{tabular}{l}
+\begin{tabularx}{.9\textwidth}{Xl}
+\hline
+Studies' inclusion criteria  \\ \hline
+- Automatically identified \\
+\hspace{1cm}  - Published and available in electronic data sources \\
+\hspace{1cm}  - Only articles and reviews \\
+\hspace{1cm}  - Contain search keywords in the title, abstract or author keywords \\
+\hspace{1cm}  - In English \\
+\hspace{1cm}  - All publication years \\
+- Personally identified \\
+\hspace{1cm}  - About SOA development using Agile Development Method \\
+\hspace{1cm}  - Have to be more than four pages \\
+\hline
+Studies' exclusion criteria \\ \hline
+- Studies that cite SOA and Agile although it isn't the main purposes to explain about development SBA using agile \\
+- Papers which are obviously not related to the research questions in this protocol \\
+- Duplicate publications on the same approach  \\ \hline
+\end{tabularx}
+%\end{tabular}
+%}
+%\end{adjustbox}
+\caption{Study selection criteria}
+\label{tab:StudySelectionCriteria}
+\end{table}
+
+\begin{table}[ht]
+\begin{tabularx}{.9\textwidth}{lXlXlX}
+\hline
+Data field & Porpose & \begin{tabular}[c]{@{}l@{}}Research \\ questions\end{tabular} \\ \hline
+Reviewer & Name of reviwer & RQ1 \\
+Title & Name of study & RQ1 \\
+Authors & Study authors & RQ \\
+Publication source & Where the paper was published, name of journal, conference, etc. & RQ \\
+Publication type & Is the paper a conference paper, journal paper, etc.? & RQ \\
+Year of publication & When study was published & RQ \\
+Primary/secondary & Does the study use primary or secondary data? & RQ \\
+Study type & Type of research methods used & RQ \\
+Study population & Study participants, students, academics, industry experts, etc. & RQ \\
+Research question & Research question(s) of the study & RQ \\
+Study focus & Primary objective of the study & RQ \\
+Processes & Process described in the study & RQ \\
+Findings/conclusions & Main conclusions from the study & RQ \\
+IS valid & Was it a valid study? & RQ \\ \hline
+\end{tabularx}%
+\caption{Data extraction fields}
+\label{tab:DataExtractionFields}
+\end{table}
+
+\subsection{Data synthesis strategy}
+\label{subsec:DataSynthesis}
+\todo{todo}
